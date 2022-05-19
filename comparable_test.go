@@ -10,10 +10,6 @@ func Comparable[T comparable](value1, value2 T) bool {
 	return value1 == value2
 }
 
-type Number interface{
-	int64 | float64
-}
-
 func SumNumbers[K comparable, V Number](m map[K]V) V {
     var s V
     for _, v := range m {
